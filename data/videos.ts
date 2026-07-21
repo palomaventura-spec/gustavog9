@@ -9,7 +9,7 @@ export interface FeaturedVideo {
   descriptionEn: string;
 
   thumbnail: string;
-  video: string;
+  youtubeId: string;
 
   duration: string;
   season: string;
@@ -26,7 +26,7 @@ export interface MatchVideo {
   subtitle: string;
 
   thumbnail: string;
-  video: string;
+  youtubeId: string;
 
   club?: string;
   goals?: number;
@@ -55,7 +55,7 @@ export const featuredVideo: FeaturedVideo = {
     "A collection of goals, movements and key plays showcasing his technical growth, tactical intelligence and attacking ability.",
 
   thumbnail: "/images/videos/highlights-cover.png",
-  video: "/videos/highlights.mp4",
+  youtubeId: "",
 
   duration: "Melhores momentos",
   season: "2025–2026",
@@ -67,21 +67,21 @@ export const keyMatches: MatchVideo[] = [
     title: "Campeonato da Federação",
     subtitle: "6 gols em uma partida",
     thumbnail: "/images/videos/seis-gols-cover.png",
-    video: "/videos/seis-gols.mp4",
+    youtubeId: "",
     club: "Arouca",
     competition: "Campeonato Carioca de Futsal",
     season: "2026",
     category: "Sub-8",
     goals: 6,
     featured: true,
-    available: true,
+    available: false,
   },
   {
     id: 2,
     title: "Campeonato da Federação",
     subtitle: "5 gols em uma partida",
     thumbnail: "/images/videos/cinco-gols-cover.png",
-    video: "/videos/cinco-gols.mp4",
+    youtubeId: "b8PhpMC0ma8",
     club: "Arouca",
     competition: "Campeonato Carioca de Futsal",
     season: "2026",
@@ -94,20 +94,20 @@ export const keyMatches: MatchVideo[] = [
     title: "Estreia pelo Botafogo",
     subtitle: "2 gols na estreia",
     thumbnail: "/images/videos/estreia-botafogo.png",
-    video: "/videos/estreia-botafogo.mp4",
+    youtubeId: "",
     club: "Botafogo",
     competition: "Futebol de Campo",
     season: "2026",
     category: "Sub-8",
     goals: 2,
-    available: true,
+    available: false,
   },
   {
     id: 4,
     title: "Segundo jogo pelo Botafogo",
     subtitle: "2 gols na partida",
     thumbnail: "/images/videos/botafogo-second-match.png",
-    video: "/videos/dois-gols-botafogo.mp4",
+    youtubeId: "ULRKMnTMh7U",
     club: "Botafogo",
     competition: "Futebol de Campo",
     season: "2026",

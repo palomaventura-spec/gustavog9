@@ -34,7 +34,7 @@ export default function KeyMatches() {
               title={match.title}
               subtitle={match.subtitle}
               thumbnail={match.thumbnail}
-              video={match.video}
+              video={match.youtubeId}
             />
           ))}
 
