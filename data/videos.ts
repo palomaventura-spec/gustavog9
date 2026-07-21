@@ -55,7 +55,7 @@ export const featuredVideo: FeaturedVideo = {
     "A collection of goals, movements and key plays showcasing his technical growth, tactical intelligence and attacking ability.",
 
   thumbnail: "/images/videos/highlights-cover.png",
-  youtubeId: "",
+  youtubeId: "UXed2s1pOgk",
 
   duration: "Melhores momentos",
   season: "2025–2026",
@@ -67,14 +67,14 @@ export const keyMatches: MatchVideo[] = [
     title: "Campeonato da Federação",
     subtitle: "6 gols em uma partida",
     thumbnail: "/images/videos/seis-gols-cover.png",
-    youtubeId: "UXed2s1pOgk",
+    youtubeId: "",
     club: "Arouca",
     competition: "Campeonato Carioca de Futsal",
     season: "2026",
     category: "Sub-8",
     goals: 6,
     featured: true,
-    available: true,
+    available: false,
   },
   {
     id: 2,
