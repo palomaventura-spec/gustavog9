@@ -21,7 +21,7 @@ export const playerData = {
   dominantFoot: "Direito",
 
   matches: 62,
-  officialGoals: 127,
+  officialGoals: 128,
   penaltyGoals: 3,
   totalGoals: 130,
 

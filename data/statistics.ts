@@ -5,7 +5,7 @@ export const careerStatistics = [
     labelEn: "Official Matches",
   },
   {
-    value: 127,
+    value: 128,
     label: "Gols oficiais",
     labelEn: "Official Goals",
   },
