@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Site oficial de Gustavo Aguiar (G9), jovem atleta luso-brasileiro nascido em 2018. Atacante no futebol e pivô no futsal, com trajetória, estatísticas, conquistas e vídeos.",
+    "Site oficial de Gustavo Aguiar (G9), jovem atleta luso-brasileiro. Conheça sua trajetória, estatísticas, vídeos e conquistas no futebol e futsal.",
 
   applicationName: "Gustavo Aguiar • G9",
 
@@ -31,81 +31,132 @@ export const metadata: Metadata = {
     "Gustavo Aguiar G9",
     "G9",
     "Botafogo",
-    "Botafogo futebol",
-    "Botafogo futsal",
-    "Arouca futsal",
-    "jovem atleta",
-    "atleta nascido em 2018",
-    "futebol de base",
-    "futsal de base",
-    "atacante",
-    "pivô",
-    "player profile",
-    "football player",
-    "youth football",
+    "Botafogo Futebol",
+    "Botafogo Futsal",
+    "Arouca",
+    "Jovem Atleta",
+    "Futebol",
+    "Futsal",
+    "Player Profile",
+    "Football Player",
+    "Youth Football",
+    "Soccer",
+    "Portugal",
+    "Brasil",
   ],
 
   authors: [
     {
-      name: "Gustavo Aguiar • G9",
+      name: "Paloma d'Aguiar",
       url: "https://gustavoaguiarg9.online",
     },
   ],
 
-  creator: "Gustavo Aguiar • G9",
-  publisher: "Gustavo Aguiar • G9",
+  creator: "Paloma d'Aguiar",
+
+  publisher: "Gustavo Aguiar",
+
+  category: "Sports",
+
+  referrer: "origin-when-cross-origin",
 
   alternates: {
-    canonical: "/",
+    canonical: "https://gustavoaguiarg9.online",
+
+    languages: {
+      "pt-BR": "https://gustavoaguiarg9.online",
+      "en-US": "https://gustavoaguiarg9.online/en",
+    },
   },
 
   robots: {
     index: true,
     follow: true,
+    nocache: false,
+
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
+      noimageindex: false,
       "max-image-preview": "large",
       "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
 
+  icons: {
+    icon: [
+      {
+        url: "/favicon.ico",
+      },
+      {
+        url: "/favicon-16x16.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+      {
+        url: "/favicon-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+    ],
+
+    shortcut: "/favicon.ico",
+
+    apple: [
+      {
+        url: "/apple-touch-icon.png",
+      },
+    ],
+  },
+
+  manifest: "/site.webmanifest",
+
   openGraph: {
     title: "Gustavo Aguiar G9 | Jovem Atleta do Botafogo",
+
     description:
-      "Conheça a trajetória, as estatísticas, as conquistas e os melhores vídeos de Gustavo Aguiar, atacante no futebol e pivô no futsal.",
+      "Conheça Gustavo Aguiar (G9), jovem atleta luso-brasileiro. Trajetória, estatísticas, vídeos e conquistas.",
+
     url: "https://gustavoaguiarg9.online",
-    type: "website",
+
+    siteName: "Gustavo Aguiar G9",
+
     locale: "pt_BR",
+
     alternateLocale: ["en_US"],
-    siteName: "Gustavo Aguiar • G9",
+
+    type: "website",
+
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Gustavo Aguiar G9 — Jovem atleta do Botafogo",
+        alt: "Gustavo Aguiar G9",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Gustavo Aguiar G9 | Jovem Atleta do Botafogo",
+
+    title: "Gustavo Aguiar G9",
+
     description:
-      "Trajetória, estatísticas, conquistas e vídeos de Gustavo Aguiar no futebol e no futsal.",
+      "Conheça Gustavo Aguiar (G9), jovem atleta do Botafogo.",
+
     images: ["/images/og-image.jpg"],
   },
-
-  category: "sports",
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
+
   themeColor: "#050608",
+
   colorScheme: "dark",
 };
 
@@ -115,7 +166,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="scroll-smooth">
+    <html
+      lang="pt-BR"
+      className="scroll-smooth"
+      suppressHydrationWarning
+    >
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen overflow-x-hidden bg-[#050608] text-white antialiased`}
       >
