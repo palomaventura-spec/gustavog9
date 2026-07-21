@@ -13,9 +13,13 @@ import Clubs from "@/sections/home/Clubs";
 import Instagram from "@/sections/home/Instagram";
 import Contact from "@/sections/home/Contact";
 
+import PersonSchema from "@/components/seo/PersonSchema";
+
 export default function Home() {
   return (
     <>
+      <PersonSchema />
+
       <Navbar />
 
       <main>
