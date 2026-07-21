@@ -43,7 +43,7 @@ export default function FeaturedVideo() {
             title={featuredVideo.title}
             subtitle={featuredVideo.subtitle}
             thumbnail={featuredVideo.thumbnail}
-            video={featuredVideo.youtubeId}
+            youtubeId={featuredVideo.youtubeId}
           />
 
           <div className="grid gap-5 border-t border-white/10 px-4 py-5 sm:grid-cols-3 sm:items-center sm:px-6">
