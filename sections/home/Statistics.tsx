@@ -55,7 +55,7 @@ export default function Statistics() {
             </p>
 
             <p className="mt-5 text-4xl font-black text-white">
-              128
+              {careerStatistics[1].value}
             </p>
 
             <p className="mt-4 leading-7 text-zinc-400">
