@@ -1,16 +1,24 @@
+import { playerStats, getAverage } from "./playerStats";
+
 export const careerStatistics = [
   {
-    value: 62,
+    value: playerStats.official.matches,
     label: "Jogos oficiais",
     labelEn: "Official Matches",
   },
   {
-    value: 128,
+    value: playerStats.official.goals,
     label: "Gols oficiais",
     labelEn: "Official Goals",
   },
   {
-    value: "2,08",
+    value: getAverage(
+      playerStats.official.matches,
+      playerStats.official.goals
+    )
+      .toFixed(2)
+      .replace(".", ","),
+
     label: "Média de gols",
     labelEn: "Goals per Match",
   },
@@ -22,6 +30,7 @@ export const careerStatistics = [
 ] as const;
 
 export const penaltyStatistics = {
-  penaltyShootoutGoals: 3,
-  totalGoalsIncludingShootouts: 130,
+  penaltyShootoutGoals: 2,
+  totalGoalsIncludingShootouts:
+    playerStats.official.goals + 2,
 };
