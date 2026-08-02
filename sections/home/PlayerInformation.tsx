@@ -10,6 +10,7 @@ import {
 
 import Container from "@/components/shared/Container";
 import { playerData } from "@/data/player";
+import { getAverage, playerStats } from "@/data/playerStats";
 
 const playerDetails = [
   {
@@ -76,17 +77,22 @@ const playerDetails = [
 
 const profileStats = [
   {
-    value: playerData.matches,
+    value: playerStats.official.matches,
     label: "Jogos oficiais",
     labelEn: "Official matches",
   },
   {
-    value: playerData.officialGoals,
+    value: playerStats.official.goals,
     label: "Gols oficiais",
     labelEn: "Official goals",
   },
   {
-    value: "2,05",
+    value: getAverage(
+      playerStats.official.matches,
+      playerStats.official.goals
+    )
+      .toFixed(2)
+      .replace(".", ","),
     label: "Gols por jogo",
     labelEn: "Goals per match",
   },
