@@ -1,8 +1,8 @@
 export const playerStats = {
   official: {
-    matches: 68,
-    goals: 133,
-    updatedAt: "2026-08-19",
+    matches: 69,
+    goals: 135,
+    updatedAt: "2026-08-23",
   },
 
   penalties: {
@@ -12,8 +12,8 @@ export const playerStats = {
   clubs: {
     botafogo: {
       total: {
-        matches: 8,
-        goals: 8,
+        matches: 9,
+        goals: 10,
       },
 
       football: {
@@ -22,8 +22,8 @@ export const playerStats = {
       },
 
       futsal: {
-        matches: 5,
-        goals: 5,
+        matches: 6,
+        goals: 7,
       },
     },
 
