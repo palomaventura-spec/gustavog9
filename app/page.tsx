@@ -12,6 +12,7 @@ import Timeline from "@/sections/home/Timeline";
 import Clubs from "@/sections/home/Clubs";
 import Instagram from "@/sections/home/Instagram";
 import Contact from "@/sections/home/Contact";
+import Partners from "@/sections/home/Partners";
 
 import PersonSchema from "@/components/seo/PersonSchema";
 
@@ -34,6 +35,7 @@ export default function Home() {
         <Clubs />
         <Instagram />
         <Contact />
+        <Partners />
       </main>
 
       <Footer />
