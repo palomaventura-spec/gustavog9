@@ -1,8 +1,8 @@
 export const playerStats = {
   official: {
-    matches: 69,
-    goals: 135,
-    updatedAt: "2026-08-23",
+    matches: 70,
+    goals: 138,
+    updatedAt: "2026-08-29",
   },
 
   penalties: {
@@ -22,8 +22,8 @@ export const playerStats = {
       },
 
       futsal: {
-        matches: 6,
-        goals: 7,
+        matches: 7,
+        goals: 10,
       },
     },
 
