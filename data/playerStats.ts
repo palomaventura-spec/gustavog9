@@ -1,51 +1,25 @@
+import { careerRecords } from "./career/records";
+const aggregate = (records: typeof careerRecords) => ({
+  matches: records.reduce((a, r) => a + r.matches, 0),
+  goals: records.reduce((a, r) => a + r.officialGoals, 0),
+});
+const forClub = (club: string) => careerRecords.filter(r => r.club === club);
+const botafogo = forClub("Botafogo");
+const arouca = forClub("Arouca");
+const sporting = forClub("Sporting Brazil");
 export const playerStats = {
-  official: {
-    matches: 70,
-    goals: 138,
-    updatedAt: "2026-08-29",
-  },
-
-  penalties: {
-    shootoutGoals: 2,
-  },
-
+  official: { ...aggregate(careerRecords), updatedAt: "2026-10-29" },
+  penalties: { shootoutGoals: careerRecords.reduce((a,r) => a + r.penaltyShootoutGoals, 0) },
   clubs: {
+    arouca: { total: aggregate(arouca), futsal: aggregate(arouca) },
     botafogo: {
-      total: {
-        matches: 9,
-        goals: 10,
-      },
-
-      football: {
-        matches: 3,
-        goals: 3,
-      },
-
-      futsal: {
-        matches: 7,
-        goals: 10,
-      },
+      total: aggregate(botafogo),
+      // Somente competições com modalidade explicitamente identificada.
+      football: aggregate(botafogo.filter(r => r.competition === "Edilson Silva (campo)")),
+      futsal: aggregate(botafogo.filter(r => r.competition.includes("Futsal"))),
     },
-
-    arouca: {
-      total: {
-        matches: 60,
-        goals: 125,
-      },
-
-      futsal: {
-        matches: 60,
-        goals: 125,
-      },
-    },
+    sportingBrazil: { total: aggregate(sporting), classification: "Escolinha / futebol de formação" },
   },
 };
-
-export const getAverage = (
-  matches: number,
-  goals: number
-): number => {
-  if (matches === 0) return 0;
-
-  return Number((goals / matches).toFixed(2));
-};
+export const getAverage = (matches: number, goals: number): number =>
+  matches === 0 ? 0 : Number((goals / matches).toFixed(2));

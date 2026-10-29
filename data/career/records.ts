@@ -1,21 +1,14 @@
 export type CareerRecord = {
-  id: string;
-  season: number;
-  period?: string;
-  club: string;
-  competition: string;
-  matches: number;
-  officialGoals: number;
-  penaltyShootoutGoals: number;
-  topScorer: boolean;
-  goalsOnVideo?: number;
-  notes?: string;
+  id: string; season: number; period?: string; club: string;
+  competition: string; matches: number; officialGoals: number;
+  penaltyShootoutGoals: number; topScorer: boolean;
+  goalsOnVideo?: number; notes?: string;
 };
 
+// Jogos não informados ficam em 0 (pendente), não são estimados.
 export const careerRecords: CareerRecord[] = [
-  // 2025 — Arouca
   {
-    id: "2025-arouca-copa-ibeu",
+    id: "2025-arouca-copa-ibeu-1",
     season: 2025,
     period: "1º semestre",
     club: "Arouca",
@@ -24,44 +17,43 @@ export const careerRecords: CareerRecord[] = [
     officialGoals: 7,
     penaltyShootoutGoals: 0,
     topScorer: true,
+    notes: "Artilheiro",
   },
   {
-    id: "2025-arouca-novos-talentos",
+    id: "2025-arouca-novos-talentos-1o-semestre-2",
     season: 2025,
     period: "1º semestre",
     club: "Arouca",
-    competition: "Novos Talentos",
+    competition: "Novos Talentos (1º semestre)",
     matches: 6,
     officialGoals: 23,
     penaltyShootoutGoals: 0,
     topScorer: false,
   },
   {
-    id: "2025-arouca-toca-e-sai",
+    id: "2025-arouca-toca-e-sai-1o-semestre-3",
     season: 2025,
     period: "1º semestre",
     club: "Arouca",
-    competition: "Toca e Sai",
+    competition: "Toca e Sai (1º semestre)",
     matches: 1,
     officialGoals: 2,
     penaltyShootoutGoals: 0,
     topScorer: false,
   },
   {
-    id: "2025-arouca-riofutsal-livre",
+    id: "2025-arouca-riofutsal-livre-4",
     season: 2025,
     period: "1º semestre",
     club: "Arouca",
-    competition: "RioFutsal Livre",
+    competition: "Riofutsal Livre",
     matches: 1,
     officialGoals: 2,
     penaltyShootoutGoals: 0,
     topScorer: false,
   },
-
-  // 2025 — Sporting Brazil
   {
-    id: "2025-sporting-brazil-abm-futsal",
+    id: "2025-sporting-brazil-abm-futsal-5",
     season: 2025,
     period: "1º semestre",
     club: "Sporting Brazil",
@@ -70,9 +62,10 @@ export const careerRecords: CareerRecord[] = [
     officialGoals: 5,
     penaltyShootoutGoals: 0,
     topScorer: false,
+    notes: "Escolinha / futebol de formação",
   },
   {
-    id: "2025-sporting-brazil-abm-society",
+    id: "2025-sporting-brazil-abm-society-6",
     season: 2025,
     period: "1º semestre",
     club: "Sporting Brazil",
@@ -81,9 +74,10 @@ export const careerRecords: CareerRecord[] = [
     officialGoals: 11,
     penaltyShootoutGoals: 0,
     topScorer: true,
+    notes: "Escolinha; artilheiro",
   },
   {
-    id: "2025-sporting-brazil-carioquinha",
+    id: "2025-sporting-brazil-carioquinha-7",
     season: 2025,
     period: "1º semestre",
     club: "Sporting Brazil",
@@ -92,31 +86,101 @@ export const careerRecords: CareerRecord[] = [
     officialGoals: 1,
     penaltyShootoutGoals: 0,
     topScorer: false,
+    notes: "Escolinha",
   },
-
-  /*
-   * O restante de 2025 ainda precisa ser revisado.
-   * O total confirmado da temporada é:
-   * 27 jogos e 56 gols oficiais.
-   *
-   * Por isso, usamos um registro de ajuste temporário.
-   */
   {
-    id: "2025-ajuste-segundo-semestre",
+    id: "2025-arouca-toca-e-sai-escolinhas-2o-semestre-8",
     season: 2025,
     period: "2º semestre",
     club: "Arouca",
-    competition: "Competições diversas",
-    matches: 5,
-    officialGoals: 5,
+    competition: "Toca e Sai Escolinhas (2º semestre)",
+    matches: 1,
+    officialGoals: 1,
     penaltyShootoutGoals: 0,
     topScorer: false,
-    notes: "Registro temporário até revisão jogo por jogo.",
   },
-
-  // 2026 — Arouca
   {
-    id: "2026-arouca-copa-verao-federacao",
+    id: "2025-arouca-toca-e-sai-federados-2o-semestre-9",
+    season: 2025,
+    period: "2º semestre",
+    club: "Arouca",
+    competition: "Toca e Sai Federados (2º semestre)",
+    matches: 1,
+    officialGoals: 2,
+    penaltyShootoutGoals: 0,
+    topScorer: false,
+  },
+  {
+    id: "2025-arouca-novos-talentos-2o-semestre-10",
+    season: 2025,
+    period: "2º semestre",
+    club: "Arouca",
+    competition: "Novos Talentos (2º semestre)",
+    matches: 1,
+    officialGoals: 1,
+    penaltyShootoutGoals: 0,
+    topScorer: false,
+  },
+  {
+    id: "2025-arouca-riofutsal-2o-semestre-11",
+    season: 2025,
+    period: "2º semestre",
+    club: "Arouca",
+    competition: "Riofutsal (2º semestre)",
+    matches: 1,
+    officialGoals: 1,
+    penaltyShootoutGoals: 0,
+    topScorer: false,
+  },
+  {
+    id: "2025-arouca-federacao-2o-semestre-12",
+    season: 2025,
+    period: "2º semestre",
+    club: "Arouca",
+    competition: "Federação (2º semestre)",
+    matches: 6,
+    officialGoals: 10,
+    penaltyShootoutGoals: 0,
+    topScorer: false,
+    notes: "7 jogos listados contra Canto do Rio, Vasco e Grajaú C; revisar partidas se necessário",
+  },
+  {
+    id: "2025-arouca-toca-e-sai-2o-semestre-demais-jogos-13",
+    season: 2025,
+    period: "2º semestre",
+    club: "Arouca",
+    competition: "Toca e Sai (2º semestre, demais jogos)",
+    matches: 3,
+    officialGoals: 1,
+    penaltyShootoutGoals: 0,
+    topScorer: false,
+    notes: "Contra Heliópolis, Elite e Madureira",
+  },
+  {
+    id: "2025-arouca-riofutsal-arouca-x-madureira-2o-semestre-14",
+    season: 2025,
+    period: "2º semestre",
+    club: "Arouca",
+    competition: "Riofutsal Arouca x Madureira (2º semestre)",
+    matches: 1,
+    officialGoals: 0,
+    penaltyShootoutGoals: 0,
+    topScorer: false,
+  },
+  {
+    id: "2025-arouca-jogos-arouca-x-vasco-2o-semestre-15",
+    season: 2025,
+    period: "2º semestre",
+    club: "Arouca",
+    competition: "Jogos Arouca x Vasco (2º semestre)",
+    matches: 2,
+    officialGoals: 1,
+    penaltyShootoutGoals: 0,
+    topScorer: false,
+    notes: "Modalidade/competição a confirmar",
+  },
+  {
+    id: "2026-arouca-copa-verao-federacao-16",
     season: 2026,
     club: "Arouca",
     competition: "Copa Verão Federação",
@@ -126,65 +190,134 @@ export const careerRecords: CareerRecord[] = [
     topScorer: false,
   },
   {
-    id: "2026-arouca-federacao-primeiro-semestre",
+    id: "2026-arouca-toca-e-sai-17",
     season: 2026,
-    period: "1º semestre",
+    club: "Arouca",
+    competition: "Toca e Sai",
+    matches: 7,
+    officialGoals: 13,
+    penaltyShootoutGoals: 0,
+    topScorer: false,
+    notes: "Inclui a final",
+  },
+  {
+    id: "2026-arouca-riofutsal-18",
+    season: 2026,
+    club: "Arouca",
+    competition: "Riofutsal",
+    matches: 4,
+    officialGoals: 5,
+    penaltyShootoutGoals: 0,
+    topScorer: false,
+    notes: "Inclui partidas de Sub-10",
+  },
+  {
+    id: "2026-arouca-copa-zico-19",
+    season: 2026,
+    club: "Arouca",
+    competition: "Copa Zico",
+    matches: 1,
+    officialGoals: 1,
+    penaltyShootoutGoals: 0,
+    topScorer: false,
+  },
+  {
+    id: "2026-arouca-jogos-contra-olaria-e-iguacu-20",
+    season: 2026,
+    club: "Arouca",
+    competition: "Jogos contra Olaria e Iguaçu",
+    matches: 2,
+    officialGoals: 3,
+    penaltyShootoutGoals: 0,
+    topScorer: false,
+    notes: "Competição a confirmar",
+  },
+  {
+    id: "2026-arouca-campeonato-da-federacao-21",
+    season: 2026,
     club: "Arouca",
     competition: "Campeonato da Federação",
     matches: 12,
     officialGoals: 28,
     penaltyShootoutGoals: 0,
     topScorer: true,
+    notes: "12 jogos; artilheiro segundo histórico informado",
   },
-
-  /*
-   * Outros campeonatos do Arouca em 2026.
-   * Total confirmado pelo Arouca na temporada:
-   * 32 jogos e 63 gols oficiais.
-   *
-   * Copa Verão + Federação:
-   * 18 jogos e 39 gols.
-   *
-   * Restante:
-   * 14 jogos e 24 gols.
-   */
   {
-    id: "2026-arouca-outras-competicoes",
+    id: "2026-arouca-copa-dente-de-leite-22",
     season: 2026,
     club: "Arouca",
-    competition:
-      "Toca e Sai, RioFutsal, Copa Zico e Copa Dente de Leite",
-    matches: 14,
-    officialGoals: 24,
+    competition: "Copa Dente de Leite",
+    matches: 0,
+    officialGoals: 2,
     penaltyShootoutGoals: 1,
     topScorer: false,
-    notes: "Será detalhado posteriormente por competição e partida.",
+    notes: "Quantidade de jogos a confirmar; disputa de pênaltis separada",
   },
-
-  // 2026 — Botafogo, campo
   {
-    id: "2026-botafogo-campo",
+    id: "2026-botafogo-edilson-silva-campo-23",
     season: 2026,
     club: "Botafogo",
-    competition: "Futebol de campo",
-    matches: 2,
+    competition: "Edilson Silva (campo)",
+    matches: 4,
     officialGoals: 3,
     penaltyShootoutGoals: 1,
     topScorer: false,
+    notes: "Quatro jogos; um pênalti de disputa separado",
   },
-
-  // 2026 — Sinno Cup
   {
-    id: "2026-botafogo-sinno-cup",
+    id: "2026-botafogo-sinno-cup-24",
     season: 2026,
-    club: "Equipe do Botafogo",
+    club: "Botafogo",
     competition: "Sinno Cup",
     matches: 0,
     officialGoals: 5,
     penaltyShootoutGoals: 1,
     topScorer: true,
+    notes: "Artilheiro; quantidade de jogos a confirmar; equipe do Botafogo com uniforme diferente",
     goalsOnVideo: 1,
-    notes:
-      "Equipe, comissão e treinadores do Botafogo, com uniforme diferente do oficial.",
+  },
+  {
+    id: "2026-botafogo-copa-das-americas-futsal-25",
+    season: 2026,
+    club: "Botafogo",
+    competition: "Copa das Américas Futsal",
+    matches: 4,
+    officialGoals: 4,
+    penaltyShootoutGoals: 0,
+    topScorer: false,
+    notes: "Quatro jogos informados; três jogos com gols",
+  },
+  {
+    id: "2026-botafogo-federacao-estadual-futsal-26",
+    season: 2026,
+    club: "Botafogo",
+    competition: "Federação Estadual Futsal",
+    matches: 8,
+    officialGoals: 12,
+    penaltyShootoutGoals: 0,
+    topScorer: false,
+  },
+  {
+    id: "2026-botafogo-festibolin-27",
+    season: 2026,
+    club: "Botafogo",
+    competition: "Festibolin",
+    matches: 3,
+    officialGoals: 3,
+    penaltyShootoutGoals: 0,
+    topScorer: false,
+    notes: "Modalidade a confirmar",
+  },
+  {
+    id: "2026-botafogo-torneio-pelo-joias-28",
+    season: 2026,
+    club: "Botafogo",
+    competition: "Torneio Pelo Jóias",
+    matches: 2,
+    officialGoals: 2,
+    penaltyShootoutGoals: 0,
+    topScorer: false,
+    notes: "Modalidade a confirmar",
   },
 ];

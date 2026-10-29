@@ -1,36 +1,11 @@
 import { playerStats, getAverage } from "./playerStats";
-
 export const careerStatistics = [
-  {
-    value: playerStats.official.matches,
-    label: "Jogos oficiais",
-    labelEn: "Official Matches",
-  },
-  {
-    value: playerStats.official.goals,
-    label: "Gols oficiais",
-    labelEn: "Official Goals",
-  },
-  {
-    value: getAverage(
-      playerStats.official.matches,
-      playerStats.official.goals
-    )
-      .toFixed(2)
-      .replace(".", ","),
-
-    label: "Média de gols",
-    labelEn: "Goals per Match",
-  },
-  {
-    value: 3,
-    label: "Artilharias",
-    labelEn: "Top Scorer Awards",
-  },
-] as const;
-
+  { value: playerStats.official.matches, label: "Jogos registrados", labelEn: "Recorded Matches" },
+  { value: playerStats.official.goals, label: "Gols em partidas", labelEn: "Match Goals" },
+  { value: getAverage(playerStats.official.matches,playerStats.official.goals).toFixed(2).replace(".", ","),
+    label: "Média provisória", labelEn: "Provisional Goals per Match" },
+];
 export const penaltyStatistics = {
-  penaltyShootoutGoals: 2,
-  totalGoalsIncludingShootouts:
-    playerStats.official.goals + 2,
+  penaltyShootoutGoals: playerStats.penalties.shootoutGoals,
+  totalGoalsIncludingShootouts: playerStats.official.goals + playerStats.penalties.shootoutGoals,
 };

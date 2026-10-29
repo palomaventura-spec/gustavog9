@@ -1,3 +1,40 @@
+function BecomePartner() {
+  const whatsapp = "5521972952963";
+
+  const message = encodeURIComponent(
+    "Olá! Conheci o Gustavo G9 pelo site oficial e gostaria de conversar sobre uma possível parceria esportiva."
+  );
+
+  return (
+    <div className="mx-auto mt-14 max-w-3xl rounded-xl border border-[#C9A65B]/40 bg-[#0D0F12] px-6 py-10 text-center">
+      <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#C9A65B]">
+        Oportunidades de parceria
+      </p>
+
+      <h3 className="text-2xl font-black uppercase text-white md:text-3xl">
+        Faça parte da jornada do G9
+      </h3>
+
+      <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-gray-300">
+        Estamos abertos a conversar com marcas e empresas interessadas
+        em apoiar o desenvolvimento esportivo de Gustavo Aguiar.
+      </p>
+
+      <a
+        href={`https://wa.me/${whatsapp}?text=${message}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-7 inline-flex items-center justify-center rounded-md bg-[#C9A65B] px-8 py-4 text-sm font-bold uppercase tracking-wide text-black transition hover:bg-[#E1BE75]"
+      >
+        Seja parceiro do G9
+      </a>
+
+      <p className="mt-4 text-xs text-gray-500">
+        Contato comercial com o responsável pelo atleta
+      </p>
+    </div>
+  );
+}
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 
@@ -79,6 +116,7 @@ export default function Partners() {
           base.
         </p>
       </Container>
-    </section>
+            <BecomePartner />
+      </section>
   );
 }

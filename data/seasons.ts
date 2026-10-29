@@ -1,14 +1,10 @@
-export const seasons = [
-  {
-    season: "2025",
-    clubs: "Arouca",
-    matches: 27,
-    goals: 56,
-  },
-  {
-    season: "2026",
-    clubs: "Arouca e Botafogo",
-    matches: 35,
-    goals: 72,
-  },
-] as const;
+import { careerRecords } from "./career/records";
+export const seasons = [2025, 2026].map((season) => {
+  const records = careerRecords.filter(r => r.season === season);
+  return {
+    season: String(season),
+    clubs: season === 2025 ? "Arouca e Sporting Brasil (escolinha)" : "Arouca e Botafogo",
+    matches: records.reduce((sum,r) => sum + r.matches, 0),
+    goals: records.reduce((sum,r) => sum + r.officialGoals, 0),
+  };
+});

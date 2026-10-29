@@ -30,13 +30,13 @@ export const careerData = [
     stats: [
       {
         value: String(playerStats.clubs.arouca.total.goals),
-        label: "Gols oficiais",
-        labelEn: "Official goals",
+        label: "Gols em partidas",
+        labelEn: "Match goals",
       },
       {
         value: String(playerStats.clubs.arouca.total.matches),
-        label: "Jogos oficiais",
-        labelEn: "Official matches",
+        label: "Jogos registrados",
+        labelEn: "Recorded matches",
       },
       {
         value: formatAverage(
@@ -94,29 +94,29 @@ export const careerData = [
     descriptionEn:
       "Following his development with Arouca, Gustavo began a new chapter with Botafogo, expanding his experience into football while continuing his futsal development.",
 
-    highlight: `${playerStats.clubs.botafogo.total.goals} gols em ${playerStats.clubs.botafogo.total.matches} jogos pelo Botafogo`,
+    highlight: "24 gols pelo Botafogo",
 
-    highlightEn: `${playerStats.clubs.botafogo.total.goals} goals in ${playerStats.clubs.botafogo.total.matches} matches for Botafogo`,
+    highlightEn: "24 goals for Botafogo",
 
     stats: [
       {
         value: String(playerStats.clubs.botafogo.total.matches),
-        label: "Jogos oficiais",
-        labelEn: "Official matches",
+        label: "Jogos registrados",
+        labelEn: "Recorded matches",
       },
       {
         value: String(playerStats.clubs.botafogo.total.goals),
-        label: "Gols oficiais",
-        labelEn: "Official goals",
+        label: "Gols em partidas",
+        labelEn: "Match goals",
       },
       {
         value: `${playerStats.clubs.botafogo.football.matches}J • ${playerStats.clubs.botafogo.football.goals}G`,
-        label: "Futebol de campo",
+        label: "Edilson Silva (campo)",
         labelEn: "Football",
       },
       {
         value: `${playerStats.clubs.botafogo.futsal.matches}J • ${playerStats.clubs.botafogo.futsal.goals}G`,
-        label: "Futsal",
+        label: "Federação e Copa (futsal)",
         labelEn: "Futsal",
       },
       {
@@ -134,7 +134,7 @@ export const careerData = [
     milestones: [
       "Início da trajetória no futebol de campo",
       "3 gols nos 2 primeiros jogos de futebol de campo",
-      "4 gols em 4 jogos oficiais de futsal",
+      "16 gols em 12 jogos na Federação Estadual e na Copa das Américas de futsal",
       "Participação na Supercopa das Américas pelo Botafogo Futsal",
       "Artilheiro da Sinno Cup com 5 gols",
       "Continuidade da formação esportiva no campo e no futsal",
@@ -143,7 +143,7 @@ export const careerData = [
     milestonesEn: [
       "Started his football journey",
       "3 goals in his first 2 football matches",
-      "4 goals in 4 official futsal matches",
+      "16 goals across 12 State Federation and Copa das Américas futsal matches",
       "Represented Botafogo Futsal at the Supercopa das Américas",
       "Sinno Cup Top Scorer with 5 goals",
       "Continued development in both football and futsal",
