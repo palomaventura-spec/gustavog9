@@ -73,7 +73,7 @@ export default function Partners() {
         </div>
 
         {/* Cards dos parceiros */}
-        <div className="mx-auto mt-12 flex max-w-4xl flex-wrap justify-center gap-6">
+        <div className="mx-auto mt-12 grid w-full max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {partners.map((partner) => (
             <a
               key={partner.id}
@@ -81,7 +81,7 @@ export default function Partners() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Visitar ${partner.name}`}
-              className="group relative flex min-h-[250px] w-full max-w-[360px] flex-col items-center justify-center overflow-hidden border border-white/10 bg-[#080a0d] p-8 text-center transition duration-500 hover:border-[#C8A95A]/40 hover:bg-[#C8A95A]/[0.035]"
+              className="group relative flex min-h-[250px] w-full flex-col items-center justify-center overflow-hidden border border-white/10 bg-[#080a0d] p-8 text-center transition duration-500 hover:border-[#C8A95A]/40 hover:bg-[#C8A95A]/[0.035]"
             >
               <ExternalLink
                 size={16}
@@ -89,7 +89,7 @@ export default function Partners() {
               />
 
               {/* Logo */}
-              <div className="relative h-32 w-full max-w-[280px]">
+              <div className="relative h-36 w-full max-w-[290px]">
                 <Image
                   src={partner.logo}
                   alt={`Logo ${partner.name}`}
@@ -116,7 +116,7 @@ export default function Partners() {
           base.
         </p>
       </Container>
-            <BecomePartner />
+      <BecomePartner />
       </section>
   );
 }

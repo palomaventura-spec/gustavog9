@@ -15,5 +15,13 @@ export const partners = [
     descriptionEn: "Technology and innovation in youth sports.",
     website: "https://onzeup.com.br",
   },
+  {
+    id: "uxlab360",
+    name: "UXLab360",
+    logo: "/images/partners/uxlab360-logo.png",
+    description: "Desenvolvimento web, design e soluções digitais.",
+    descriptionEn: "Web development, design and digital solutions.",
+    website: "https://uxlab360.vercel.app/",
+  },
 ] as const;
 
