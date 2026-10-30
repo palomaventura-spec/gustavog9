@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ArrowDown, Play } from "lucide-react";
 
 import Container from "@/components/shared/Container";
@@ -23,25 +22,30 @@ export default function Hero() {
       </div>
 
       <Container className="relative z-10">
-        <div className="relative flex min-h-[calc(100vh-5rem)] flex-col py-8 sm:py-10 lg:block lg:py-16">
+        <div className="relative flex min-h-[calc(100vh-5rem)] flex-col py-4 sm:py-8 lg:block lg:py-16">
 
           {/* Imagem */}
-          <div className="relative order-1 h-[420px] overflow-hidden rounded-b-[2rem] sm:h-[520px] lg:absolute lg:inset-y-0 lg:right-[-8%] lg:h-auto lg:w-[70%] lg:rounded-none xl:right-[-10%]">
-            <Image
-              src="/images/hero/gustavo-hero.png"
-              alt="Gustavo Aguiar"
-              fill
-              priority
-              className="object-cover object-center lg:object-[55%_center]"
-            />
+          <div className="relative order-1 h-[310px] overflow-hidden rounded-b-[2rem] sm:h-[420px] lg:absolute lg:inset-y-0 lg:right-[-8%] lg:h-auto lg:w-[70%] lg:rounded-none xl:right-[-10%]">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster="/images/g9-hero-poster.jpg"
+              aria-label="Gustavo G9 em ação"
+              className="absolute inset-0 h-full w-full object-cover object-center lg:object-[55%_center]"
+            >
+              <source src="/videos/g9-hero-loop.mp4" type="video/mp4" />
+            </video>
 
-            <div className="absolute inset-0 bg-gradient-to-r from-[#050608] via-[#050608]/25 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#050608] via-[#050608]/10 to-transparent" />
 
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_45%,transparent_0%,transparent_38%,rgba(5,6,8,.18)_70%,rgba(5,6,8,.72)_100%)]" />
           </div>
 
           {/* Conteúdo */}
-          <div className="relative z-20 order-2 -mt-20 flex flex-1 flex-col justify-end pb-10 lg:mt-0 lg:min-h-[calc(100vh-10rem)] lg:w-[52%] lg:justify-center">
+          <div className="relative z-20 order-2 mt-6 flex flex-1 flex-col justify-end pb-10 lg:mt-0 lg:min-h-[calc(100vh-10rem)] lg:w-[52%] lg:justify-center">
 
             <div className="mb-6 flex items-center gap-4">
               <span className="h-px w-12 bg-[#C8A95A]" />
@@ -51,7 +55,7 @@ export default function Hero() {
               </p>
             </div>
 
-            <h1 className="text-[3.8rem] font-black uppercase leading-[0.82] tracking-[-0.075em] text-white sm:text-[5.6rem] lg:text-[6.2rem] xl:text-[7rem]">
+            <h1 className="text-[3.3rem] font-black uppercase leading-[0.82] tracking-[-0.075em] text-white sm:text-[5.6rem] lg:text-[6.2rem] xl:text-[7rem]">
               Gustavo
 
               <span className="mt-3 block text-[#C8A95A]">
